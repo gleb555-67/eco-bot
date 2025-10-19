@@ -3,7 +3,7 @@ import random
 import os
 
 # Инициализация бота с использованием его токена
-bot = telebot.TeleBot("7286707534:AAHzxH2vHl7LthGd-o24WsAZmj9T7MLs_Ys")
+bot = telebot.TeleBot("Ваш токен")
 
 # Обработчик команды '/start' и '/hello'
 @bot.message_handler(commands=['start', 'hello'])
@@ -45,4 +45,5 @@ def send_mem(message):
     gg = random.choice(b)
     with open(f'images_eco/{gg}', 'rb') as f:  
         bot.send_photo(message.chat.id, f)  
+
 bot.polling()
